@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<div class="container">
+    <h1 class="display-4 text-center">@ViewData["Title"]</h1>
+    <div class="card mb-4 p-4 mx-auto" style="width: 36rem;">
+        <form>
+            <label for="hours" class="form-label">Enter the hours you need from me:</label>
+            <br />
+            <input id="hours" type="number" min="0" class="form-control" />
+            <br />
+            <label for="cost" class="form-label">Cost per hour ($):</label>
+            <br />
+            <input id="cost" type="number" value="12.34" readonly class="form-control" />
+            <br />
+            <input id="calculate" type="button" value="Calculate" class="btn btn-primary" />
+            <br /><br />
+            <label for="result" class="form-label">Total Cost ($):</label>
+            <br />
+            <input id="result" type="number" readonly class="form-control" />
+        </form>
+    </div>
+    <p class="text-center">
+        Return <a asp-area="" asp-controller="Home" asp-action="Index">home</a>.
+    </p>
+</div>
+
